@@ -1,38 +1,94 @@
 .App {
-  text-align: center;
+    overflow: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    border-bottom: 1px solid #00182b39;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dropzone {
+    border: 2px dashed #00182b39;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.log-viewer {
+    overflow: auto;
+    height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.filters {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 1000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.level-filter {
+    margin-left: 20px;
+    border: 1px solid #00182b39;
+    border-radius: 5px;
+}
+
+.search {
+    padding: 2px 10px;
+    border: 1px solid #00182b39;
+    border-radius: 5px;
+    min-width: 300px;
+}
+
+.logs {
+    padding: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.logs th, .logs td {
+    border: 1px solid #00182b39;
+    padding: 10px;
+    text-align: left;
+}
+
+.logs th {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.logs tr:hover {
+    background-color: whitesmoke;
+}
+
+.time-filter {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+    color: black;
+}
+
+.start-time {
+    width: 200px;
+    border: 1px solid #00182b39;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.end-time {
+    width: 200px;
+    border: 1px solid #00182b39;
+    border-radius: 5px;
 }
